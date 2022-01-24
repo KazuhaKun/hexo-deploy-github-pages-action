@@ -44,6 +44,12 @@ cd "${GITHUB_WORKSPACE}"
 echo ">>> Install NPM dependencies ..."
 npm install
 
+echo ">>> Install Themes with Dependencies ..."
+cd "${GITHUB_WORKSPACE}"/themes
+git clone https://github.com/KazuhaKun/hexo-theme-aurora.git aurora
+cd aurora
+npm install
+
 echo ">>> Clean folder ..."
 npx hexo clean
 
