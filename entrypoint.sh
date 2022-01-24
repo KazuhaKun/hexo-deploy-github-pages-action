@@ -38,15 +38,16 @@ echo ">>> Install Git ..."
 apt-get update && \
 apt-get install -y git && \
 
-echo ">>> Install Themes with Dependencies ..."
-cd "${GITHUB_WORKSPACE}"/themes
-git clone https://github.com/KazuhaKun/hexo-theme-aurora.git aurora
+#echo ">>> Install Themes with Dependencies ..."
+#cd "${GITHUB_WORKSPACE}"/themes
+#git clone https://github.com/KazuhaKun/hexo-theme-aurora.git aurora
 
 # Directs the action to the the Github workspace.
 cd "${GITHUB_WORKSPACE}"
 
 echo ">>> Install NPM dependencies ..."
 npm install
+npm install hexo-theme-aurora --save
 
 echo ">>> Clean folder ..."
 npx hexo clean
