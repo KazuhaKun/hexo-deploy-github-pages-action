@@ -38,9 +38,9 @@ echo ">>> Install Git ..."
 apt-get update && \
 apt-get install -y git && \
 
-#echo ">>> Install Themes with Dependencies ..."
-#cd "${GITHUB_WORKSPACE}"/themes
-#git clone -b master https://github.com/KazuhaKun/hexo-theme-butterfly.git butterfly
+echo ">>> Install Themes with Dependencies ..."
+cd "${GITHUB_WORKSPACE}"/themes
+git clone -b master ${THEME_REPOSITORY} ${THEME_DIRNAME}
 
 # Directs the action to the the Github workspace.
 cd "${GITHUB_WORKSPACE}"
